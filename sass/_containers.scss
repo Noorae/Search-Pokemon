@@ -1,0 +1,37 @@
+@mixin container-style {
+    max-width: 90%;
+    border-radius: 20px;
+}
+
+@mixin ul-style {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin h3-style {
+    margin: 10px;
+    font-size: 30px;
+}
+
+@mixin image-container-style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin image-style {
+    max-width: 90%;
+}
+
+@mixin border-dot-style {
+    border-bottom: dotted;
+    border-bottom-width: 10px;
+    border-color: rgb(233, 197, 97);
+}
+
+@mixin damage-cont-style {
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+}

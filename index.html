@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles/main.css" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
+        <title>Pokemonmon</title>
+    </head>
+    <body>
+        <nav id="nav-bar">
+            <button data-view="home">Home</button>
+            <button data-view="type">Types</button>
+            <button data-view="ability">Abilities</button>
+        </nav>
+        <div id="container">
+            <div id="home">
+                <h1>Pokémon</h1>
+                <div class="search-container">
+                    <input
+                        type="text"
+                        id="pokemon-search-input"
+                        class="search-input"
+                        placeholder="Search for a Pokémon"
+                    />
+                    <button
+                        type="submit"
+                        class="searchButton pokemonSearchButton"
+                    >
+                        <span class="material-symbols-outlined"> search </span>
+                    </button>
+                    <ul class="suggestion-list" id="suggestions-pokemon"></ul>
+                    <div id="pokemon-details"></div>
+                </div>
+                <div id="pokemonInfoContParent">
+                    <div id="pokemonInfoCont">
+                        <div id="pokemonImageContainer"></div>
+                        <div id="pokemonInformationContainer">
+                            <h3 id="pokemonInfoName"></h3>
+                            <div id="pokemonInAb">
+                                <h4>Abilities</h4>
+                                <p id="pokemonInfoAbilities"></p>
+                            </div>
+                            <div id="pokemonInStat">
+                                <div id="pokemonFirstInfo">
+                                    <div class="pokemonParent">
+                                        <p id="pokemonInfoHp_text"></p>
+                                        <p
+                                            class="pokData"
+                                            id="pokemonInfoHp_data"
+                                        ></p>
+                                    </div>
+                                    <div class="pokemonParent">
+                                        <p id="pokemonInfoAttack_text"></p>
+                                        <p
+                                            class="pokData"
+                                            id="pokemonInfoAttack_data"
+                                        ></p>
+                                    </div>
+                                    <div class="pokemonParent">
+                                        <p id="pokemonInfoDefence_text"></p>
+                                        <p
+                                            class="pokData"
+                                            id="pokemonInfoDefence_data"
+                                        ></p>
+                                    </div>
+                                </div>
+                                <div id="pokemonSecondInfo">
+                                    <div class="pokemonParent">
+                                        <p id="pokemonInfoSpecialAtt_text"></p>
+                                        <p
+                                            class="pokData"
+                                            id="pokemonInfoSpecialAtt_data"
+                                        ></p>
+                                    </div>
+                                    <div class="pokemonParent">
+                                        <p id="pokemonInfoSpecialDef_text"></p>
+                                        <p
+                                            class="pokData"
+                                            id="pokemonInfoSpecialDef_data"
+                                        ></p>
+                                    </div>
+                                    <div class="pokemonParent">
+                                        <p id="pokemonInfoSpeed_text"></p>
+                                        <p
+                                            class="pokData"
+                                            id="pokemonInfoSpeed_data"
+                                        ></p>
+                                    </div>
+                                </div>
+                                <div id="pokemonThirdInfo">
+                                    <div class="pokemonParent">
+                                        <p id="pokemonInfoHeight_text"></p>
+                                        <p
+                                            class="pokData"
+                                            id="pokemonInfoHeight_data"
+                                        ></p>
+                                    </div>
+                                    <div class="pokemonParent">
+                                        <p id="pokemonInfoWeight_text"></p>
+                                        <p
+                                            class="pokData"
+                                            id="pokemonInfoWeight_data"
+                                        ></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="pokemonInTy">
+                                <p id="pokemonInfoTypes"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="type">
+                <h1>Types</h1>
+                <div class="typeCont">
+                    <button class="typeButton">normal</button>
+                    <button class="typeButton">fighting</button>
+                    <button class="typeButton">flying</button>
+                    <button class="typeButton">poison</button>
+                    <button class="typeButton">ground</button>
+                    <button class="typeButton">rock</button>
+                    <button class="typeButton">bug</button>
+                    <button class="typeButton">ghost</button>
+                    <button class="typeButton">steel</button>
+                    <button class="typeButton">fire</button>
+                    <button class="typeButton">water</button>
+                    <button class="typeButton">grass</button>
+                    <button class="typeButton">electric</button>
+                    <button class="typeButton">psychic</button>
+                    <button class="typeButton">ice</button>
+                    <button class="typeButton">dragon</button>
+                    <button class="typeButton">dark</button>
+                    <button class="typeButton">fairy</button>
+                    <button class="typeButton">shadow</button>
+                    <div id="typeData">
+                        <div id="typeInfoCont">
+                            <div id="typeParent">
+                                <h3 id="typeName"></h3>
+                                <div id="damageList">
+                                    <div id="damageToParent">
+                                        <div
+                                            class="damageData"
+                                            id="doubleDamageTo"
+                                        >
+                                            <p id="doubleDamageTo_text">
+                                                200% Damage to
+                                            </p>
+                                            <p id="doubleDamageTo_data"></p>
+                                        </div>
+                                        <div
+                                            class="damageData"
+                                            id="halfDamageTo"
+                                        >
+                                            <p id="halfDamageTo_text">
+                                                50% damage to
+                                            </p>
+                                            <p id="halfDamageTo_data"></p>
+                                        </div>
+                                        <div class="damageData" id="noDamageTo">
+                                            <p id="noDamageTo_text">
+                                                0% damage to
+                                            </p>
+                                            <p id="noDamageTo_data"></p>
+                                        </div>
+                                    </div>
+                                    <div id="damageFromParent">
+                                        <div
+                                            class="damageData"
+                                            id="doubleDamageFrom"
+                                        >
+                                            <p id="doubleDamageFrom_text">
+                                                200% damage from
+                                            </p>
+                                            <p id="doubleDamageFrom_data"></p>
+                                        </div>
+                                        <div
+                                            class="damageData"
+                                            id="halfDamageFrom"
+                                        >
+                                            <p id="halfDamageFrom_text">
+                                                50% damage from
+                                            </p>
+                                            <p id="halfDamageFrom_data"></p>
+                                        </div>
+                                        <div
+                                            class="damageData"
+                                            id="noDamageFrom"
+                                        >
+                                            <p id="noDamageFrom_text">
+                                                0% damage from
+                                            </p>
+                                            <p id="noDamageFrom_data"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="pokemonsWithT">
+                                <h3 id="pokemonWithTypeTitle"></h3>
+                                <p id="pokemonsWithType"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="ability">
+                <h1>Abilities</h1>
+                <div class="search-container">
+                    <input
+                        type="text"
+                        id="ability-search-input"
+                        class="search-input"
+                        placeholder="Search for an ability"
+                    />
+                    <button
+                        type="submit"
+                        class="searchButton abilitySearchButton"
+                    >
+                        <span class="material-symbols-outlined"> search </span>
+                    </button>
+                    <ul class="suggestion-list" id="suggestions-ability"></ul>
+                    <div id="ability-details"></div>
+                </div>
+                <div id="abilityInfoParent">
+                    <div id="abilityInfoCont">
+                        <h3 id="abilityInfoName"></h3>
+                        <p id="abilityInfoEffect"></p>
+                    </div>
+                    <div id="pokemonsWithCont">
+                        <h3 id="pokemonsWithAbilityTitle"></h3>
+                        <p id="pokemonsWithAbility"></p>
+                    </div>
+                </div>
+                <div id="pokeballImageContainer">
+                    <img
+                        class="pokeBallImg"
+                        src="assets/pokeball.png"
+                        alt="Pokeball"
+                        width="480"
+                        height="480"
+                    />
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div>
+                <p>© Noora Vainionpää 2023</p>
+                <p>Powered by PokeApi</p>
+                <a href="https://pokeapi.co/" target="_blank">PokeApi</a>
+            </div>
+        </footer>
+        <script type="module" src="/src/index.js"></script>
+        <script type="module" src="/src/helpers.js"></script>
+        <script type="module" src="/src/api.js"></script>
+        <script type="module" src="/src/views.js"></script>
+    </body>
+</html>

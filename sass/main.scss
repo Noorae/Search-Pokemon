@@ -1,0 +1,470 @@
+@import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
+@import "variables";
+@import "button";
+@import "navbar";
+@import "searchbar";
+@import "footer";
+@import "containers";
+
+//styling for the root of the page
+body {
+    display: flex;
+    flex-direction: column;
+    margin: $remove-margins;
+    min-height: 100vh;
+    font-family: $primary-font;
+    background-color: $primary-red;
+}
+
+// main page container limited to 1200px wide
+#container {
+    max-width: 1200px;
+    margin: 8px auto 30px;
+    padding: 8px;
+    text-align: center;
+    background-color: $primary-red;
+}
+
+// general styling for header text
+h1,
+h3 {
+    color: $primary-cream;
+    text-shadow: $primary-text-shadow;
+    font-size: 40px;
+}
+
+h4 {
+    margin: $remove-margins;
+    padding: $remove-padding;
+    text-shadow: $primary-text-shadow;
+}
+
+// hide main pages on default
+#pokemonInfoContParent,
+#typeData,
+#abilityInfoParent {
+    display: none;
+}
+
+//styling of the navbar
+#nav-bar {
+    @include nav-bar-style;
+    background-color: $primary-cream;
+}
+
+//styling on bavbar buttons
+#nav-bar button {
+    @include button-style;
+    color: $nav-color-text;
+    background-color: $nav-color-background;
+    box-shadow: $nav-color-shadow;
+    text-shadow: $nav-color-text-shadow;
+    font-family: $primary-font;
+}
+
+#nav-bar button:hover {
+    @include button-hover;
+    background-color: $nav-color-highlight;
+}
+
+#nav-bar button:active {
+    @include button-active;
+    background-color: $nav-color-highlight;
+    box-shadow: $nav-color-shadow-highlight;
+}
+
+// styling search container
+.search-container {
+    @include search-container-style;
+    background-color: $primary-cream;
+    box-shadow: $primary-shadow;
+}
+
+//styling search input
+.search-input {
+    display: inline-block;
+    @include search-input-style;
+    font-family: $primary-font;
+    background-color: $primary-cream;
+    width: 65%;
+}
+
+//styling search button
+.searchButton {
+    @include search-button-style;
+    box-shadow: $search-button-shadow;
+    background-color: $primary-yellow;
+}
+
+//styling on hovered search buttons
+.searchButton:hover {
+    background-color: $search-button-hover;
+}
+
+//styling on pressed search button
+.searchButton:active {
+    @include seach-active;
+    background-color: $search-button-pressed;
+}
+
+//search symbol styling
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    font-size: 7px;
+    color: $primary-gray;
+}
+
+// remove outline when input is clicked
+input:focus {
+    outline: none;
+}
+
+//styling for suggestions container in search
+.suggestion-list {
+    @include suggestion-list-style;
+    background-color: $primary-cream;
+    box-shadow: $primary-shadow;
+}
+
+//styling for lists (suggestions)
+ul {
+    @include ul-style;
+}
+
+//styling for type buttons on types page
+.typeButton {
+    @include button-style;
+    color: $type-button-text-color;
+    background-color: $type-button-color;
+    box-shadow: $type-button-shadow;
+    font-family: $primary-font;
+}
+
+//styling for hovered type buttons on types page
+.typeButton:hover {
+    @include button-hover;
+    background-color: $type-button-hightlight;
+}
+
+//styling for pressed type buttons on types page
+.typeButton:active {
+    @include button-active;
+    background-color: $type-button-hightlight;
+    box-shadow: $type-color-shadow-highlight;
+}
+
+//styling for footer
+footer {
+    @include footer-style;
+    color: $nav-color-highlight;
+}
+
+//styling for footer links
+footer a {
+    color: $primary-yellow;
+    text-shadow: $nav-color-text-shadow;
+}
+
+//styling for footer p elements
+footer p {
+    margin: $remove-margins;
+}
+
+//styling for pokemon information on pokemon page
+#pokemonInfoCont {
+    display: flex;
+    margin-bottom: 60px;
+    flex-direction: column;
+}
+
+//styling for pokemon image container
+#pokemonImageContainer {
+    @include image-container-style;
+}
+
+// styling for pokemon image on pokemon page
+#pokemonImageContainer img {
+    @include image-style;
+}
+
+//styling for pokemon name on pokemon page
+#pokemonInfoName {
+    @include border-dot-style;
+    max-width: 80%;
+    text-align: center;
+    margin: auto auto 15px;
+}
+
+// styling for pokemons abilities on pokemon page
+#pokemonInAb {
+    @include container-style;
+    background-color: $primary-cream;
+    color: $primary-gray;
+    box-shadow: $primary-shadow;
+    margin: 20px auto;
+    padding: 3px;
+}
+
+//styling for pokemons abilities header on pokemon page
+#pokemonInAb h4 {
+    color: $primary-red;
+    margin: 10px;
+    font-size: 30px;
+}
+
+// styling for pokemon stats on pokemon page
+#pokemonInStat {
+    @include container-style;
+    display: flex;
+    margin: 10px auto;
+    flex-wrap: wrap;
+}
+
+//styling for pokemon stat sets in pokemon page
+#pokemonFirstInfo,
+#pokemonSecondInfo,
+#pokemonThirdInfo {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: $cont-color-background;
+    color: $primary-cream;
+    margin: 3px;
+    padding: 10px;
+    max-width: 95%;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+#pokemonFirstInfo,
+#pokemonSecondInfo {
+    flex-basis: 40%;
+}
+
+#pokemonThirdInfo {
+    flex-basis: 100%;
+}
+
+//styling for stats in pokemon page
+.pokemonParent {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5px;
+}
+
+.pokemonParent p {
+    margin: 2px;
+    text-shadow: $secondary-text-shadow;
+}
+
+// styling for stat numbers on pokemon page
+.pokData {
+    color: $primary-yellow;
+    background-color: $cont-text-background;
+    border-radius: 500px;
+    padding: 4px;
+    margin: 2px;
+    font-size: 14px;
+}
+
+// styling for pokemon types on pokemon page
+#pokemonInTy {
+    @include container-style;
+    background-color: $primary-yellow;
+    box-shadow: $primary-shadow;
+    margin: 20px auto;
+    padding: 5px;
+}
+
+//styling for pokemon type text on pokemon page
+#pokemonInfoTypes {
+    color: rgb(255, 247, 230);
+    font-size: 24px;
+    font-weight: 900;
+    text-shadow: $primary-text-shadow;
+}
+
+//styling for type container info on types page
+#typeInfoCont {
+    @include border-dot-style;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+}
+
+// styling for type damage info on types page
+#typeParent {
+    @include container-style;
+    background-color: $primary-cream;
+    box-shadow: $primary-shadow;
+    color: $primary-gray;
+    margin: 20px auto;
+    padding: 3px;
+}
+
+//styling for type damage heading on types page
+#typeParent h3 {
+    @include h3-style;
+    color: $primary-red;
+}
+
+// styling for type damage to parent on types page
+#damageToParent {
+    @include container-style;
+    @include damage-cont-style;
+    background-color: $type-stat-background-yellow;
+    box-shadow: $primary-shadow;
+}
+
+//styling for type damage from parent on types page
+#damageFromParent {
+    @include container-style;
+    @include damage-cont-style;
+    background-color: $type-stat-background-red;
+    box-shadow: $primary-shadow;
+}
+
+// styling for damage stats on types page
+.damageData {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 11px;
+    padding: 2px 8px;
+    margin: 5px;
+}
+
+//styling for p elements in damage stats on types page
+.damageData p {
+    margin: $remove-margins;
+    padding: $remove-padding;
+}
+
+// styling for pokemons that have spesific type on type page
+#pokemonsWithT {
+    @include container-style;
+    background-color: $primary-cream;
+    color: $primary-text-color-grey;
+    box-shadow: $primary-shadow;
+    margin: 5px auto 40px;
+    padding: 5px;
+}
+
+// styling for pokemons that have spesific type header on type page
+#pokemonsWithT h3 {
+    @include h3-style;
+    color: $primary-yellow;
+}
+
+// styling for ability summary on abilities page
+#abilityInfoCont {
+    @include container-style;
+    background-color: $primary-yellow;
+    box-shadow: $primary-shadow;
+    margin: 20px auto;
+    padding: 3px;
+}
+
+//styling for ability summary heading on abilities page
+#abilityInfoCont h3 {
+    @include h3-style;
+    color: $primary-red;
+}
+
+// styling for pokemons with ability on abilities page
+#pokemonsWithCont {
+    @include container-style;
+    background-color: $primary-cream;
+    box-shadow: $primary-shadow;
+    color: $primary-gray;
+    padding: 3px;
+    margin: 20px auto;
+}
+
+// styling for pokemons with ability header on abilities page
+#pokemonsWithCont h3 {
+    @include h3-style;
+    color: $primary-yellow;
+}
+
+//styling for image container on abilities page
+#pokeballImageContainer {
+    margin-bottom: 40px;
+}
+
+//styling for image on abilities page
+#pokeballImageContainer img {
+    @include image-style;
+    height: auto;
+}
+
+//styling for screen size bigger than 600px width
+@media (min-width: 600px) {
+    // pokemon page stats info
+    #pokemonFirstInfo,
+    #pokemonSecondInfo,
+    #pokemonThirdInfo {
+        flex-basis: auto;
+    }
+
+    //types page damage stats parent
+    #typeParent {
+        padding: 10px;
+        margin: 15px;
+    }
+    //types page damage stats
+    #damageToParent p,
+    #damageFromParent p {
+        font-size: 14px;
+    }
+
+    //types page pokemons in type category
+    #pokemonsWithT {
+        margin: 15px;
+        padding: 10px;
+    }
+}
+
+//styling for screen size bigger than 900px width
+@media (min-width: 900px) {
+    // pokemon page pokemon information parent
+    #pokemonInfoCont {
+        @include container-style;
+        background-color: $cont-color-background-red;
+        box-shadow: $primary-shadow;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 50px auto;
+        padding: 15px;
+    }
+
+    //types page type container info
+    #typeInfoCont {
+        display: flex;
+        justify-content: space-between;
+        margin: 30px;
+    }
+
+    //types page type container items
+    #typeInfoCont > * {
+        flex: 1;
+    }
+
+    //types page type damage info
+    #typeParent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    //types page damage stats
+    #damageToParent,
+    #damageFromParent {
+        margin: 30px;
+        padding: 7px;
+    }
+    //types page damage stats p elements
+    #damageToParent p,
+    #damageFromParent p {
+        font-size: 20px;
+    }
+}

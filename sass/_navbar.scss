@@ -1,0 +1,11 @@
+@mixin nav-bar-style {
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: 15px;
+    margin-left: 0px;
+    text-align: center;
+    z-index: 1000;
+    padding-bottom: 5px;
+}

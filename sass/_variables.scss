@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
+
+//styling variables
+$primary-font: "Pangolin", cursive;
+$primary-red: rgb(209, 53, 59);
+$primary-yellow: rgb(233, 197, 97);
+$primary-cream: rgb(248, 229, 190);
+$primary-gray: rgba(44, 44, 44, 1);
+$primary-shadow: 4px 4px 0px 0px rgba(44, 44, 44, 1);
+$primary-text-shadow: 2px 2px #383838;
+$secondary-text-shadow: 1px 1px #383838;
+$primary-text-color-grey: rgb(75, 75, 75);
+
+$nav-color-white: rgb(228, 224, 224);
+$nav-color-background: rgb(209, 53, 59);
+$nav-color-text: rgb(235, 206, 206);
+$nav-color-text-shadow: 1px 1px #535353;
+$nav-color-shadow: 0 5px rgba(44, 44, 44, 1);
+$nav-color-shadow-highlight: 0 2px 2px rgba(44, 44, 44, 1);
+$nav-color-highlight: rgb(129, 41, 41);
+
+$search-button-shadow: 1px 1px 0px 0px rgba(44, 44, 44, 1);
+$search-button-hover: rgb(202, 171, 84);
+$search-button-pressed: rgb(143, 128, 63);
+
+$type-button-color: rgb(224, 202, 101);
+$type-button-hightlight: rgb(143, 128, 63);
+$type-button-shadow: 0 5px rgb(44, 44, 44);
+$type-color-shadow-highlight: 0 2px 2px rgba(44, 44, 44, 1);
+$type-button-text-color: #535353;
+
+$type-stat-background-red: rgba(238, 30, 30, 0.6);
+$type-stat-background-yellow: rgb(233, 197, 97);
+
+$cont-color-background: rgb(255, 255, 255, 0.1);
+$cont-text-background: rgba(70, 3, 3, 0.2);
+$cont-color-background-red: rgb(129, 39, 39, 0.3);
+
+$remove-margins: 0px;
+$remove-padding: 0px;
