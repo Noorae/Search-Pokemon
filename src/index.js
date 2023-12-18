@@ -11,7 +11,7 @@ import { saveToLocalStorage, getFromLocalStorage } from "./helpers.js";
 import { showView, handlePopState } from "./views.js";
 
 // Set the base path based on the server
-const basePath = "/noora.t.vainionpaa/pokemonimoni";
+const basePath = "/Search-Pokemon";
 
 // Initial state
 const defaultView = "home";
